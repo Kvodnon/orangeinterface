@@ -1,0 +1,194 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "one second second second third" "four five . six seven" "four eight nine ten ten" "eleven twelve . . thirteen";
+}
+
+.box {
+  border: 1px solid black;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.one {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.four {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: four;
+  height: 120px;
+}
+
+.five {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.six {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: six;
+}
+
+.second {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: second;
+}
+
+.third {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: third;
+}
+
+.seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: seven;
+}
+
+.eight {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.ten {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: ten;
+}
+
+.eleven {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: eleven;
+}
+
+.twelve {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: twelve;
+}
+
+.thirteen {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: thirteen;
+}
+
+.orange {
+  background: orange;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+  }
+  .one {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .four {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .five {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  .six {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+  }
+  .second {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
+  .third {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
+  .seven {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
+  .eight {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  .nine {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .ten {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+  }
+  .eleven {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .twelve {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  .thirteen {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
