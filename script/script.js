@@ -2,16 +2,31 @@
 
 (function () {
   const container = document.querySelector('.grid-container');
-  
+
   let lastFocusedBox = false,
     message = "Click at rect";
 
   const focusedBox = () => {
-
     const coloringBox = () => {
       const target = event.target;
 
       if (target.matches('.box') && event.type === 'mouseover') {
+        if (lastFocusedBox) {
+          const up = lastFocusedBox.getAttribute('data-up'),
+            right = lastFocusedBox.getAttribute('data-right'),
+            down = lastFocusedBox.getAttribute('data-down'),
+            left = lastFocusedBox.getAttribute('data-left'),
+            number = target.getAttribute('data-number');
+
+          
+          
+          if (up === number || down === number || left === number || right === number) {
+            console.log('continue;: ');
+          } else {
+            return;
+          }
+        }
+
         target.classList.add('orange');
 
         if (lastFocusedBox && target !== lastFocusedBox) {
