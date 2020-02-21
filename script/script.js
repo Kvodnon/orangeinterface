@@ -1,11 +1,12 @@
 'use strict';
 
 (function () {
+  const container = document.querySelector('.grid-container');
+  
   let lastFocusedBox = false,
     message = "Click at rect";
 
   const focusedBox = () => {
-    const container = document.querySelector('.grid-container');
 
     const coloringBox = () => {
       const target = event.target;
